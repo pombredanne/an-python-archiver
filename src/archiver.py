@@ -32,7 +32,7 @@ class Archiver:
 
 class StepArchiver(Thread):
     def __init__(self, path, name="Archiver"):
-        super().__init__(name=name)
+        super(StepArchiver, self).__init__(name=name)
         self.path = path
         today = date.today()
         self.archiveName = "archive_" + str(today.year) + "_" + str(today.month) + "_" + str(today.day) + ".7z"
